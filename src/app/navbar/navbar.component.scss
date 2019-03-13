@@ -1,0 +1,49 @@
+@import url(http://fr.allfont.net/allfont.css?fonts=agency-fb);
+
+.container {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+   // overflow: hidden;
+    height: 110px;
+    background-color:  rgba($color:black, $alpha: 0.5);
+    top: 0;
+    width: 100%;
+    position: relative;
+}
+
+img {
+   margin: 5pt;
+   width: 400px;
+   vertical-align: middle;
+
+}
+
+nav ul {
+    list-style: none;
+    vertical-align: bottom;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-right: 10pt;
+}
+
+nav ul li {
+    display: inline;
+    font-family: 'Agency FB', arial;
+    font-size: 16pt;
+    padding: 7pt;
+}
+
+nav ul li > a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li.gold > a
+{
+    color: #D9A415
+}
