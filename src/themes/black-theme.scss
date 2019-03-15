@@ -1,0 +1,30 @@
+@import url(http://fr.allfont.net/allfont.css?fonts=agency-fb);
+@import url(http://fr.allfont.net/allfont.css?fonts=hemi-head-426);
+
+@import '~@angular/material/theming';
+
+$general-typography: mat-typography-config(
+  $font-family: 'Agency FB, arial',
+  $body-2:        mat-typography-level(14px, 24px, 600),
+  $body-1:        mat-typography-level(18px, 24px, 200),
+  $display-1:     mat-typography-level(35px, 42px, 600),  
+  $button:        mat-typography-level(18px, 14px, 200)
+);
+
+$secondary-typography: mat-typography-config(
+  $font-family: 'Hemi Head 426, arial'
+);
+
+@include mat-core($general-typography);
+
+$edo-black-primary: mat-palette($mat-grey, 900, 300, 900);
+$edo-black-accent: mat-palette($mat-blue-grey, 400);
+$edo-black-warn: mat-palette($mat-red, 500);
+
+$edo-black-theme: mat-dark-theme(
+  $edo-black-primary,
+  $edo-black-accent,
+  $edo-black-warn
+);
+
+@include angular-material-theme($edo-black-theme);

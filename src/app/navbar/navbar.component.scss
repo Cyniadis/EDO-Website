@@ -1,49 +1,43 @@
-@import url(http://fr.allfont.net/allfont.css?fonts=agency-fb);
+@import '~@angular/material/theming';
 
-.container {
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
+$config: mat-typography-config();
 
-nav {
-   // overflow: hidden;
-    height: 110px;
-    background-color:  rgba($color:black, $alpha: 0.5);
+.navbar
+{
+    height: 100vh; 
+    position: fixed;
     top: 0;
+    z-index: 999;
     width: 100%;
-    position: relative;
 }
 
-img {
-   margin: 5pt;
-   width: 400px;
-   vertical-align: middle;
-
+.mat-button {
+    padding: 7pt;    
 }
 
-nav ul {
-    list-style: none;
-    vertical-align: bottom;
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    margin-right: 10pt;
+  
+.navbar-spacer {
+    flex: 1 1 auto;
 }
 
-nav ul li {
-    display: inline;
-    font-family: 'Agency FB', arial;
-    font-size: 16pt;
-    padding: 7pt;
+#toolbar-row 
+{
+ min-height: 70px
 }
 
-nav ul li > a {
-    color: white;
-    text-decoration: none;
+#logo
+{
+    outline: none;
+    display: inline-flex;
+    vertical-align: middle;
 }
 
-nav ul li.gold > a
+#logo > img {
+    height: 65px; 
+    margin:  auto 0;
+ }
+ 
+.gold > a
 {
     color: #D9A415
 }

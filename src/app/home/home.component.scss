@@ -1,0 +1,58 @@
+@import '~@angular/material/theming';
+
+$config: mat-typography-config();
+
+.global-home
+{
+    margin: 0;
+    padding: 0;
+    background-image: url('../../assets/images/home/home-container-bg.png');
+    background-repeat: repeat;
+    background-size: 50% 40%;
+    height: 100%;
+    width: 100%;
+}
+
+.home-list
+{
+    display:block;
+    list-style-type:none;
+    list-style-position:outside;
+    margin:0;
+    padding:0;
+    overflow: hidden;
+}
+
+.photo
+{
+    height: 350px;
+    filter: contrast(60%);
+
+}
+.right > .photo
+{
+    float: left;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
+    clear: right;
+}
+
+
+.left > .photo
+{
+    clear: left;
+    float: right;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
+}
+
+.paragraph
+{
+    font-size: mat-font-size($config, body-1);
+    font-family: mat-font-family($config);
+    padding: 20px;
+    margin: 0;
+}
+
+.right > .paragraph 
+{
+    text-align: right;
+}

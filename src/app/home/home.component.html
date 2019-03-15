@@ -1,0 +1,13 @@
+<div class="global-home">
+  <ul class="home-list" *ngFor="let hc of homeContainersList">
+    <li class="home-item" *ngFor="let img of hc.images"
+    [ngClass]="{ 'left' : hc.alignement === HomeContainerAlignement.Left, 
+                 'right' : hc.alignement === HomeContainerAlignement.Right} ">
+      <img class="photo"[src]="img" />
+
+    <div class="mat-body-1 paragraph">
+      {{ hc.paragraph }}
+    </div>
+  </li>
+  </ul>
+</div> 
