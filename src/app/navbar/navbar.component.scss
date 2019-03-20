@@ -1,19 +1,42 @@
 @import '~@angular/material/theming';
+@import '../../themes/black-theme.scss';
+@include mat-core();
 
-$config: mat-typography-config();
-
-.navbar
+.navbar 
 {
-    height: 100vh; 
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    min-height: 100%;
+
+    top:0;
+    left: 0;
+}
+
+
+.mat-sidenav-container.mat-drawer-container
+{
+    background-color: transparent;
+}
+.mat-sidenav-content.mat-drawer-content
+{
+    overflow: hidden;
+}
+
+.mat-toolbar
+{
     position: fixed;
     top: 0;
     z-index: 999;
     width: 100%;
+    opacity: 0.9;
 }
 
-.mat-button {
+.mat-button 
+{
     padding: 7pt;    
 }
+
 
   
 .navbar-spacer {
@@ -22,7 +45,7 @@ $config: mat-typography-config();
 
 #toolbar-row 
 {
- min-height: 70px
+    min-height: 70px
 }
 
 #logo
@@ -39,5 +62,5 @@ $config: mat-typography-config();
  
 .gold > a
 {
-    color: #D9A415
+    color: mat-color($edo-black-accent);
 }

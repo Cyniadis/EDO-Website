@@ -1,58 +1,80 @@
 @import '~@angular/material/theming';
+@import '../../themes/black-theme.scss';
+@import '../../themes/btn-theme.scss';
+@include mat-core();
 
-$config: mat-typography-config();
+@media screen and (max-width: 1200px) {
+     .global-home { width:100%; }
+    }
+@media screen and (min-width: 1200px) and (max-width: 1450px) {
+    .global-home { width: 80% ; }
+}
+@media screen and (min-width: 1450px) {
+    .global-home { width: 60% ; }
+}
 
 .global-home
-{
-    margin: 0;
+{   
+    height: 100vh;
     padding: 0;
     background-image: url('../../assets/images/home/home-container-bg.png');
     background-repeat: repeat;
     background-size: 50% 40%;
-    height: 100%;
-    width: 100%;
+    margin-top: 70px;
+    max-width: 1000px;
 }
 
-.home-list
+.slider
 {
-    display:block;
-    list-style-type:none;
-    list-style-position:outside;
-    margin:0;
-    padding:0;
-    overflow: hidden;
-}
-
-.photo
-{
+    width: 55%;
     height: 350px;
-    filter: contrast(60%);
-
-}
-.right > .photo
-{
-    float: left;
-    clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
-    clear: right;
 }
 
-
-.left > .photo
-{
-    clear: left;
-    float: right;
+.left > .slider 
+{ 
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
     clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 25% 100%);
+    float: right;
 }
 
-.paragraph
+.right > .slider 
+{ 
+    -webkit-clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
+    clip-path: polygon(0% 0%, 75% 0%, 100% 100%, 0% 100%);
+    float: left;
+}
+
+.home-text
 {
-    font-size: mat-font-size($config, body-1);
-    font-family: mat-font-family($config);
-    padding: 20px;
-    margin: 0;
+    padding: 5% 5% 0% 5%;
+    color: white;
 }
 
-.right > .paragraph 
+.home-text > h2
+{
+    font-family: mat-font-family($secondary-typography);
+    font-size: mat-font-size($secondary-typography,title);
+}
+
+.left > .home-text 
+{
+    text-align: left;
+}
+
+.right > .home-text
 {
     text-align: right;
+
 }
+.red > .home-text > h2 { color: red; }
+.blue > .home-text > h2 { color: rgb(0, 102, 255) }
+
+.red > .home-text > .mat-button { border-color: red; }
+.blue > .home-text  > .mat-button { border-color: rgb(0, 102, 255); }
+
+.home-button
+{
+    margin: 20px;
+    text-align: center;
+}
+

@@ -1,0 +1,28 @@
+@import './fonts/hemi-head.scss';
+@import '~@angular/material/theming';
+
+$general-typography: mat-typography-config(
+  $font-family: 'Hemi Head',
+  $display-1: mat-typography-level(18px, 48px, 700),
+);
+
+$edo-btn-primary: mat-palette($mat-amber);
+$edo-btn-accent: mat-palette($mat-red);
+$edo-btn-warn: mat-palette($mat-blue);
+
+$edo-btn-theme: mat-dark-theme(
+  $edo-btn-primary,
+  $edo-btn-accent,
+  $edo-btn-warn
+);
+
+
+.edo-button
+{
+  font-family: map-get($general-typography, font-family);
+  font-size: mat-font-size($general-typography, display-1);
+  color: mat-color(map-get($edo-btn-theme, primary));
+
+  border: 3px solid;  
+  border-radius: 20%;
+}

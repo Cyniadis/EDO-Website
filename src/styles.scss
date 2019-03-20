@@ -31,8 +31,28 @@ $edo-website-theme: mat-light-theme($edo-website-primary, $edo-website-accent, $
 
 body, html
 {
+    @include mat-core($general-typography);
+
     margin: 0;
     padding: 0;
+    min-height: 100%;
+
 }
-html, body { height: 100%; }
+body
+{
+    background-image: url('./assets/images/bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+
+}
+
+.container
+{
+    display: table;
+    margin: 0 auto;
+    min-height: 100%;
+
+}
+
 //body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

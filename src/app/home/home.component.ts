@@ -5,7 +5,7 @@ import { HOME_CONTAINERS } from './home-containers-list';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss', '../../themes/black-theme.scss']
+  styleUrls: ['./home.component.scss', '../../themes/black-theme.scss', '../../themes/btn-theme.scss']
 })
 export class HomeComponent implements OnInit {
 
@@ -17,6 +17,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.homeContainersList = HOME_CONTAINERS;
+    console.log(this.homeContainersList);
   }
 
 }

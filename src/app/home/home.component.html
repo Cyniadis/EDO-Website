@@ -1,13 +1,19 @@
-<div class="global-home">
-  <ul class="home-list" *ngFor="let hc of homeContainersList">
-    <li class="home-item" *ngFor="let img of hc.images"
-    [ngClass]="{ 'left' : hc.alignement === HomeContainerAlignement.Left, 
-                 'right' : hc.alignement === HomeContainerAlignement.Right} ">
-      <img class="photo"[src]="img" />
-
-    <div class="mat-body-1 paragraph">
-      {{ hc.paragraph }}
+<div class="global-home container">
+  <span *ngFor="let hc of homeContainersList" class="home-item" 
+        [ngClass]="{ 'left' : hc.alignement === HomeContainerAlignement.Left, 
+                     'right' : hc.alignement === HomeContainerAlignement.Right,
+                     'red' : hc.mainColor === HomeContainerColor.Red, 
+                     'blue' : hc.mainColor === HomeContainerColor.Blue }">
+    <div class="slider">
+      <slideshow [imageUrls]="hc.images" [showArrows]="false" [showDots]="false" [autoPlay]="true">
+      </slideshow>
     </div>
-  </li>
-  </ul>
-</div> 
+
+    <div class="home-text">
+      <h2 class="home-title mat-title"> {{ hc.title }}</h2>
+      <div class="mat-body-1">{{ hc.paragraph }}</div>
+      <button mat-button class="home-button edo-button">{{ hc.buttonText}}</button>
+    </div>
+
+  </span>
+</div>

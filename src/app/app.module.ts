@@ -13,16 +13,19 @@ import {
   MatIconModule,
   MatListModule,
   MatSidenavModule,
-  MatToolbarModule
+  MatToolbarModule,
 } from '@angular/material';
 
 import { AppRoutingModule } from './app-routing.module';
+import { FooterComponent } from './footer/footer.component';
+import {SlideshowModule} from 'ng-simple-slideshow';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
     HomeComponent,
+    FooterComponent,
 
   ],
   imports: [
@@ -34,7 +37,8 @@ import { AppRoutingModule } from './app-routing.module';
     MatButtonModule,
     FlexLayoutModule,
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SlideshowModule
   ],
   providers: [],
   bootstrap: [AppComponent]

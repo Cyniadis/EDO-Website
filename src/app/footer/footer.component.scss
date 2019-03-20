@@ -1,0 +1,39 @@
+@import '~@angular/material/theming';
+@import '../../themes/black-theme.scss';
+@include mat-core();
+
+footer
+{
+    font-family: mat-font-family($general-typography);
+    font-size: mat-font-size($general-typography,body-2);
+    background-color: mat-color($edo-black-primary);
+    color: white;
+    text-align: center;
+    
+    margin: 0;
+    padding: 10px;
+    z-index: 9999;
+}
+
+#divider
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 10px;
+    width: 80%;
+    margin-top: -15px;
+    position:relative;
+}
+
+.logos  img
+{
+    width: 25px;
+    padding: 5px;
+}
+
+p
+{
+    padding: 0;
+    margin: 0;
+}

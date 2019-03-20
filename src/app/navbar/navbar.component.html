@@ -11,18 +11,20 @@
         <a href='#' mat-button>{{page}}</a>
     </div>
     </mat-toolbar-row>
+    <!--<img id="divider" src="/assets/images/divider.png" />-->
   </mat-toolbar>  
 
-  <mat-sidenav-container fxFlexFill>
+  <mat-sidenav-container fxFlexFill >
     <mat-sidenav #sidenav>
-      <mat-nav-list *ngFor="let page of pages" >
+      <mat-nav-list *ngFor="let page of pages"  [ngClass]="page == 'Espace membre' ? 'gold' : ''" >
           <a href='#' mat-button>{{page}}</a>
       </mat-nav-list>
    
     </mat-sidenav>
-    <mat-sidenav-content fxFlexFill>
-        <router-outlet></router-outlet>
-    </mat-sidenav-content>
+    <!--<mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>-->
   </mat-sidenav-container>
+
 
 </div>
